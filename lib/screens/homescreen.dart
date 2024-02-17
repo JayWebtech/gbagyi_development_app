@@ -185,7 +185,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         'Introducting Yi Da Gbagyi',
                                         style: TextStyle(
                                           color: Colors.black,
-                                          fontSize: 20.0,
+                                          fontSize: 18.0,
                                           fontFamily: "Header",
                                         ),
                                       ),
@@ -193,10 +193,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                         height: 10,
                                       ),
                                       const Text(
-                                        'Introduction on how to use Yi Da Gbayi app',
+                                        'An introduction on how to use Yi Da Gbayi app',
                                         style: TextStyle(
                                           color: Colors.black,
-                                          fontSize: 16.0,
+                                          fontSize: 15.0,
                                           fontFamily: "Regular",
                                         ),
                                       ),
@@ -230,7 +230,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         'Learn Gbagyi Alphabets',
                                         style: TextStyle(
                                           color: Colors.black,
-                                          fontSize: 20.0,
+                                          fontSize: 18.0,
                                           fontFamily: "Header",
                                         ),
                                       ),
@@ -241,7 +241,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         'Learn all the alphabet in the Gbagyi language',
                                         style: TextStyle(
                                           color: Colors.black,
-                                          fontSize: 16.0,
+                                          fontSize: 15,
                                           fontFamily: "Regular",
                                         ),
                                       ),
@@ -279,7 +279,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         'Numbers and Translation',
                                         style: TextStyle(
                                           color: Colors.black,
-                                          fontSize: 20.0,
+                                          fontSize: 18,
                                           fontFamily: "Header",
                                         ),
                                       ),
@@ -290,7 +290,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         'Learn Gbagyi Numbers and their translation',
                                         style: TextStyle(
                                           color: Colors.black,
-                                          fontSize: 16.0,
+                                          fontSize: 15.0,
                                           fontFamily: "Regular",
                                         ),
                                       ),
@@ -324,7 +324,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         'Greetings and Communication',
                                         style: TextStyle(
                                           color: Colors.black,
-                                          fontSize: 20.0,
+                                          fontSize: 18.0,
                                           fontFamily: "Header",
                                         ),
                                       ),
@@ -335,7 +335,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         'Learn Greetings and Communication',
                                         style: TextStyle(
                                           color: Colors.black,
-                                          fontSize: 16.0,
+                                          fontSize: 15.0,
                                           fontFamily: "Regular",
                                         ),
                                       ),
