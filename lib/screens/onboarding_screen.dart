@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gbagyi_development_app/screens/bottom_nav.dart';
+import 'package:gbagyi_development_app/screens/homescreen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -54,7 +55,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 onPressed: () => {
                   Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => HomePage()),
+                          MaterialPageRoute(builder: (context) => BottomNav()),
                         )
                 },
                 style: ButtonStyle(

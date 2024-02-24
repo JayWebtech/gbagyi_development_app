@@ -48,9 +48,6 @@ class SplashScreenPage extends StatelessWidget {
             style: TextStyle(
                 fontFamily: 'Header', fontSize: 20, color: Color(0xFFFFFFFF)),
           ),
-          const SizedBox(
-            height: 10,
-          ),
           const Text(
             "Master the art of speaking Gbagyi with confidence",
             style: TextStyle(

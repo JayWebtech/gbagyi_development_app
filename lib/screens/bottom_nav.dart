@@ -7,14 +7,14 @@ import 'package:gbagyi_development_app/screens/lessons.dart';
 import 'package:gbagyi_development_app/screens/quiz.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class BottomNav extends StatefulWidget {
+  const BottomNav({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<BottomNav> createState() => _BottomNavState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _BottomNavState extends State<BottomNav> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
             BottomBarItem(
               bottomItemSelectedColor:  const Color(0xFF265AE8),
               label: 'Home',
-              screen: HomeScreen(),
+              screen: const HomeScreen(),
               selectedIcon: LucideIcons.home,
             ),
             BottomBarItem(

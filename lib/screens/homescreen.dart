@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gbagyi_development_app/screens/bottom_nav.dart';
+import 'package:gbagyi_development_app/screens/lessons.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Container(
-            color: Color(0xFFF3F9FE),
+            color: const Color(0xFFF3F9FE),
             padding: const EdgeInsets.all(20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -145,12 +147,27 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                const Text(
-                  'Outline',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 25.0,
-                      fontFamily: "Header"),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text(
+                      'Outline',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 25.0,
+                          fontFamily: "Header"),
+                    ),
+                    GestureDetector(
+                      onTap: () {},
+                      child: const Text(
+                        'View all',
+                        style: TextStyle(
+                            color: Color(0xFF265AE8),
+                            fontSize: 15.0,
+                            fontFamily: "Header"),
+                      ),
+                    )
+                  ],
                 ),
                 const SizedBox(
                   height: 20,
@@ -161,197 +178,93 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         Row(
                           children: [
-                            Expanded(
-                              child: Material(
-                                elevation: 4,
-                                shadowColor: Colors.grey.withOpacity(0.2),
-                                borderRadius: BorderRadius.circular(8),
-                                child: Container(
-                                  padding: const EdgeInsets.all(20),
-                                  color: Colors.white,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Image.asset(
-                                        'assets/img/1.png',
-                                        scale: 3,
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      const Text(
-                                        'Introducting Yi Da Gbagyi',
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 18.0,
-                                          fontFamily: "Header",
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      const Text(
-                                        'An introduction on how to use Yi Da Gbayi app',
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 15.0,
-                                          fontFamily: "Regular",
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
+                            buildCard(
+                              'assets/img/1.png',
+                              'Introducting Yi Da Gbagyi',
+                              'An introduction on how to use Yi Da Gbayi app',
                             ),
-                            SizedBox(width: 20,),
-                            Expanded(
-                              child: Material(
-                                elevation: 4,
-                                shadowColor: Colors.grey.withOpacity(0.2),
-                                borderRadius: BorderRadius.circular(8),
-                                child: Container(
-                                  padding: const EdgeInsets.all(20),
-                                  color: Colors.white,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Image.asset(
-                                        'assets/img/2.png',
-                                        scale: 3,
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      const Text(
-                                        'Learn Gbagyi Alphabets',
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 18.0,
-                                          fontFamily: "Header",
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      const Text(
-                                        'Learn all the alphabet in the Gbagyi language',
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 15,
-                                          fontFamily: "Regular",
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
+                            const SizedBox(
+                              width: 20,
+                            ),
+                            buildCard(
+                              'assets/img/2.png',
+                              'Learn Gbagyi Alphabets',
+                              'Learn all the alphabet in the Gbagyi language',
                             ),
                           ],
                         ),
-                        SizedBox(height: 20,),
+                        const SizedBox(
+                          height: 20,
+                        ),
                         Row(
                           children: [
-                            Expanded(
-                              child: Material(
-                                elevation: 4,
-                                shadowColor: Colors.grey.withOpacity(0.2),
-                                borderRadius: BorderRadius.circular(8),
-                                child: Container(
-                                  padding: const EdgeInsets.all(20),
-                                  color: Colors.white,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Image.asset(
-                                        'assets/img/3.png',
-                                        scale: 3,
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      const Text(
-                                        'Numbers and Translation',
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 18,
-                                          fontFamily: "Header",
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      const Text(
-                                        'Learn Gbagyi Numbers and their translation',
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 15.0,
-                                          fontFamily: "Regular",
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
+                            buildCard(
+                              'assets/img/3.png',
+                              'Numbers and Translation',
+                              'Learn Gbagyi Numbers and their translation',
                             ),
-                            SizedBox(width: 20,),
-                            Expanded(
-                              child: Material(
-                                elevation: 4,
-                                shadowColor: Colors.grey.withOpacity(0.2),
-                                borderRadius: BorderRadius.circular(8),
-                                child: Container(
-                                  padding: const EdgeInsets.all(20),
-                                  color: Colors.white,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Image.asset(
-                                        'assets/img/4.png',
-                                        scale: 3,
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      const Text(
-                                        'Greetings and Communication',
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 18.0,
-                                          fontFamily: "Header",
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      const Text(
-                                        'Learn Greetings and Communication',
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 15.0,
-                                          fontFamily: "Regular",
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
+                            const SizedBox(
+                              width: 20,
+                            ),
+                            buildCard(
+                              'assets/img/4.png',
+                              'Greetings and Communication',
+                              'Learn Greetings and Communication',
                             ),
                           ],
                         ),
                       ],
                     ),
                   ),
-                ),
+                )
               ],
             ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget buildCard(String imagePath, String title, String subtitle) {
+    return Expanded(
+      child: Material(
+        elevation: 4,
+        shadowColor: Colors.grey.withOpacity(0.2),
+        borderRadius: BorderRadius.circular(8),
+        child: Container(
+          padding: const EdgeInsets.all(20),
+          color: Colors.white,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image.asset(
+                imagePath,
+                scale: 3,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Text(
+                title,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18.0,
+                  fontFamily: "Header",
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Text(
+                subtitle,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                  fontFamily: "Regular",
+                ),
+              ),
+            ],
           ),
         ),
       ),
